@@ -6,16 +6,21 @@
  * Version: 1.0
  * Text Domain: ignore
  */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Russo+One&display=swap");
 .copyright {
-  background-color: black;
-  padding: 5px 5px;
-  text-align: center;
+  background-color: #181433;
+  font-family: "Open Sans", sans-serif;
+  color: #F1E4F1;
 }
 
-.copyright p {
-  color: white;
+.copyright .container .row {
+  padding: 1rem;
 }
 
-.copyright p a {
-  color: aquamarine;
+.copyright .container .row a {
+  color: #F12166;
+}
+
+.copyright .container .row .mit {
+  margin: 0.5rem 0rem;
 }

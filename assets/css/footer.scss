@@ -1,0 +1,20 @@
+.copyright {
+    background-color: $secudary-color;
+    font-family: $secundary-font;
+    color: $primary-help-color;
+    
+    .container {
+        .row {
+            padding: $padding;
+
+            a {
+                color: $primary-color;
+            }
+
+            .mit {
+                margin: 0.5rem 0rem;
+            }
+        }
+    }
+
+}
