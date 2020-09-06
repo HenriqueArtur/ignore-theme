@@ -1,0 +1,21 @@
+/**
+ * Theme Name: Ignore
+ * Author: Henrique Artur
+ * Author URI: henriqueartur.com
+ * Description: 
+ * Version: 1.0
+ * Text Domain: ignore
+ */
+.copyright {
+  background-color: black;
+  padding: 5px 5px;
+  text-align: center;
+}
+
+.copyright p {
+  color: white;
+}
+
+.copyright p a {
+  color: aquamarine;
+}

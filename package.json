@@ -1,0 +1,19 @@
+{
+  "name": "ignore",
+  "version": "1.0.0",
+  "description": "My site theme",
+  "scripts": {
+    "css": "node-sass --output-style expanded --include-path assets/css/ assets/css/main.scss style.css",
+    "watch": "nodemon -w assets/css/ -e scss -x \"npm run css\""
+  },
+  "keywords": [
+    "WordPress",
+    "Theme"
+  ],
+  "author": "Henrique Artur",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^4.14.1",
+    "nodemon": "^2.0.4"
+  }
+}
