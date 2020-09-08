@@ -28,12 +28,51 @@ body {
 .presentation {
   background-color: #181433;
   padding: 5rem 0rem;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .presentation .profile-img {
   width: 100%;
   max-width: 300px;
   height: auto;
+  position: relative;
+  z-index: 100;
+}
+
+.presentation .description {
+  position: relative;
+  z-index: 101;
+}
+
+.presentation .description .rect {
+  border: 1px solid #F1E4F1;
+  position: absolute;
+}
+
+.presentation .description .rect .fa-times {
+  margin: 1rem;
+  color: #F1E4F1;
+}
+
+.presentation .description .rect .fa-ellipsis-h {
+  margin: 1rem;
+  color: #F1E4F1;
+  position: absolute;
+  right: 0;
+}
+
+.presentation .description .r-first {
+  height: 70%;
+  width: 80%;
+  right: 0rem;
+}
+
+.presentation .description .r-second {
+  height: 53%;
+  width: 60%;
+  top: 9vh;
+  right: 16vw;
 }
 
 .presentation .description h1 {

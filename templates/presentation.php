@@ -1,4 +1,6 @@
 <section class="presentation">
+    
+
     <div class="container">
         <div class="row">
             <div class="col s12 m6">
@@ -7,6 +9,16 @@
                 </figure>
             </div>
             <div class="col m6 description">
+                <div class="props">
+                    <div class="rect r-first">
+                        <i class="fas fa-times"></i>
+                        <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                    <div class="rect r-second">
+                        <i class="fas fa-times"></i>
+                        <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                </div>
                 <h1>
                     <div class="title-box">
                         <span class="name">

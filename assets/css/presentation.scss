@@ -1,14 +1,51 @@
 .presentation {
     background-color: $secudary-color;
     padding: 5rem 0rem;
+    display: flex;
+    justify-content: flex-end;
 
     .profile-img {
         width: 100%;
         max-width: 300px;
         height: auto;
+        position: relative;
+        z-index: 100;
     }
 
     .description {
+        position: relative;
+        z-index: 101;
+
+        .rect {
+            border: 1px solid $primary-help-color;
+            position: absolute;
+    
+            .fa-times {
+                margin: 1rem;
+                color: $primary-help-color;
+            }
+    
+            .fa-ellipsis-h {
+                margin: 1rem;
+                color: $primary-help-color;
+                position: absolute;
+                right: 0;
+            }
+        }
+    
+        .r-first {
+            height: 70%;
+            width: 80%;
+            right: 0rem;
+        }
+    
+        .r-second {
+            height: 53%;
+            width: 60%;
+            top: 9vh;
+            right: 16vw;
+        }
+
         h1 {
             font-family: $primary-font;
             font-size: 3rem;
@@ -91,4 +128,6 @@
             }
         }
     }
+
+
 }
