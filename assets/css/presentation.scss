@@ -1,0 +1,88 @@
+.presentation {
+    background-color: $secudary-color;
+    height: 60vh;
+
+    .description {
+        h1 {
+            font-family: $primary-font;
+            font-size: 3rem;
+            color: $primary-help-color;
+
+            .title-box {
+                position: relative;
+                margin: 1rem;
+                
+                .first {
+                    width: 15rem;
+                }
+
+                .second {
+                    width: 9.2rem;
+                }
+
+                .name{
+                    padding: 0rem 0.5rem;
+                    position: absolute;
+                    z-index: 10;
+                }
+
+                .box {
+                    position: relative;
+                    background-color: $primary-color;
+                    height: 2.4rem;
+                    top: 1.2rem;
+                }
+                
+            }
+        }
+
+        h2 {
+            font-family: $primary-font;
+            font-size: 2rem;
+            color: $primary-help-color;
+            padding: 0rem 1rem;
+            margin: 0 0;
+        }
+
+        .slogan {
+            font-family: $secundary-font;
+            color: $primary-help-color;
+            font-size: 1.5rem;
+            font-weight: 300;
+            font-style: italic;
+            padding: 0rem 1rem;
+            margin: 0 0;
+        }
+
+        .social-icons {
+            font-size: 2.5rem;
+            padding: 0rem 1rem;
+            
+            .social-item {
+                color: $primary-help-color;
+                margin-right: 1rem;
+                
+
+                .icon {
+                    -webkit-transition: 0.5s ease-in-out;
+                    -moz-transition: 0.5s ease-in-out;
+                    -o-transition: 0.5s ease-in-out;
+                    transition: 0.5s ease-in-out;
+                }
+
+                .icon:hover {
+                    -webkit-transform: rotate(10deg);
+                    -moz-transform: rotate(10deg);
+                    -o-transform: rotate(10deg);
+                    -ms-transform: rotate(10deg);
+                    transform: rotate(10deg);
+                    transform: rotate(10deg);
+                }
+            }
+
+            .social-item:hover {
+                color: $primary-color;
+            }
+        }
+    }
+}
