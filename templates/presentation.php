@@ -24,15 +24,26 @@
                 <h2><?php echo get_option('occupation_value');?></h2>
                 <p class="slogan"><small><?php echo get_option('slogan_value');?></small></p>
                 <div class="social-icons">
-                    <a href="http://" target="_blank" rel="noopener noreferrer" class="social-item">
-                        <i class="icon fab fa-github-alt"></i>
-                    </a>
-                    <a href="http://" target="_blank" rel="noopener noreferrer" class="social-item">
-                        <i class="icon fab fa-linkedin"></i>
-                    </a>
-                    <a href="http://" target="_blank" rel="noopener noreferrer" class="social-item">
-                        <i class="icon fab fa-telegram-plane"></i>
-                    </a>
+                <?php
+                    $args = array( 'post_type' => 'social_medias' );
+                    $query = new WP_Query( $args );
+
+                    if( $query->have_posts() ) :
+                        while( $query->have_posts() ) :
+                            $query->the_post();
+                    ?>
+                            <?php $fa_ref     = get_post_meta($post->ID, 'fa_ref_key',      true); ?>
+                            <?php $social_url = get_post_meta($post->ID, 'social_url_key',  true); ?>
+
+                            <a href="<?php echo $social_url ?>" target="_blank" rel="noopener noreferrer" class="social-item">
+                                <i class="icon fab fa-<?php echo $fa_ref  ?>"></i>
+                            </a>
+                    <?php
+                        endwhile;
+                    endif;
+
+                    wp_reset_query();
+                    ?>
                 </div>
             </div>
         </div>
