@@ -24,10 +24,7 @@ function presentation_menu_render() {
 		<h1>Presentation Section</h1>
 		<form method="post" action="options.php">
 			<?php
-			// display settings field on theme-option page
 			settings_fields("presentation-grp");
-
-			// display all sections for theme-options page
 			do_settings_sections("presentation");
 			submit_button();
 			?>
@@ -39,8 +36,12 @@ function presentation_menu_render() {
 /*
  * SECTIONS CALLBACKS
  */
-function theme_section_description(){
+function perfil_section_description(){
 	echo '<p>Perfil Option Section</p>';
+}
+
+function social_media_section_description(){
+	echo '<p>Social Media Option Section</p>';
 }
 
 /*
@@ -74,13 +75,26 @@ function display_slogan_element(){
  * SETTINGS
  */
 function theme_settings(){
+	/*
+	 * Sections
+	 */	
 	add_settings_section(
 		'first_section',
 		'Perfil infos',
-		'theme_section_description',
+		'perfil_section_description',
 		'presentation'
 	);
 
+	add_settings_section(
+		'second_section',
+		'Social Medias',
+		'social_media_section_description',
+		'presentation'
+	);
+
+	/*
+	 * Fields
+	 */	
 	// first name
 	add_settings_field(
 		'first_name',

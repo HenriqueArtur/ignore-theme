@@ -8,3 +8,6 @@ add_action( 'wp_enqueue_scripts', 'load_scripts' );
 
 // Presentation Section
 require_once get_template_directory() . '/functions/presentation_section.php';
+
+// Custom Post Type
+require_once get_template_directory() . '/functions/custom_post_type/social_medias.php';
