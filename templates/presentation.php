@@ -10,19 +10,19 @@
                 <h1>
                     <div class="title-box">
                         <span class="name">
-                            Henrique
+                            <?php echo get_option('first_name_value');?>
                         </span>
                         <div class="box first"></div>
                     </div>
                     <div class="title-box">
                         <span class="name">
-                            Artur
+                            <?php echo get_option('second_name_value');?>
                         </span>
                         <div class="box second"></div>
                     </div>
                 </h1>
-                <h2>Dev. Full-stack</h2>
-                <p class="slogan"><small>Creativity, Design and Development</small></p>
+                <h2><?php echo get_option('occupation_value');?></h2>
+                <p class="slogan"><small><?php echo get_option('slogan_value');?></small></p>
                 <div class="social-icons">
                     <a href="http://" target="_blank" rel="noopener noreferrer" class="social-item">
                         <i class="icon fab fa-github-alt"></i>
