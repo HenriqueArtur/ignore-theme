@@ -1,6 +1,12 @@
 .presentation {
     background-color: $secudary-color;
-    height: 60vh;
+    padding: 5rem 0rem;
+
+    .profile-img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
 
     .description {
         h1 {

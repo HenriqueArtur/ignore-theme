@@ -2,8 +2,8 @@
     <div class="container">
         <div class="row">
             <div class="col s12 m6">
-                <figure class="profile-img">
-                    <img src="https://picsum.photos/500/500?random=1" alt="" class="responsive-img circle">
+                <figure class="right-align">
+                    <img src="<?php echo get_option('profile_img_value');?>" alt="" class="circle profile-img">
                 </figure>
             </div>
             <div class="col m6 description">

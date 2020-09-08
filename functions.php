@@ -6,6 +6,18 @@ function load_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'load_scripts' );
 
+function load_scripts_adm() {
+	wp_enqueue_script( 'upload-profile-helper', get_stylesheet_directory_uri() . '/assets/js/wp_helpes/upload-profile.js', array( 'jquery' ), '1.0.0', true );
+	wp_enqueue_style( 'css-helper', get_stylesheet_directory_uri() . '/assets/css/wp_helpes.css', array(), '1.0.0', 'all' );
+}
+add_action( 'admin_enqueue_scripts', 'load_scripts_adm' );
+
+/* Custom Media Uploader */ 
+add_action( 'admin_enqueue_scripts', 'load_media_files' );
+function load_media_files() {
+    wp_enqueue_media();
+}
+
 // Presentation Section
 require_once get_template_directory() . '/functions/presentation_section.php';
 

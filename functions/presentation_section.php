@@ -71,6 +71,17 @@ function display_slogan_element(){
 	<?php
 }
 
+function display_profile_img_element() {
+	?>
+	<div>
+		<img class="upload_preview" src="<?php echo get_option('profile_img_value') ?>" />
+	</div>
+    <input type="url" class="upload_field" name="profile_img_value" id="profile_img_value" readonly value="<?php echo get_option('profile_img_value'); ?>" />
+    <input type="button" class="button upload_button" value="Upload" />
+	<input type="button" class="button upload_clear" value="Remove" />
+	<?php
+}
+
 /*
  * SETTINGS
  */
@@ -145,6 +156,19 @@ function theme_settings(){
 	register_setting(
 		'presentation-grp',
 		'slogan_value'
+	);
+
+	// profile img
+	add_settings_field(
+		'profile_img',
+		'Profile image',
+		'display_profile_img_element',
+		'presentation',
+		'first_section'
+	);
+	register_setting(
+		'presentation-grp',
+		'profile_img_value'
 	);
 }
 add_action('admin_init','theme_settings');

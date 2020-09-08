@@ -27,7 +27,13 @@ body {
 
 .presentation {
   background-color: #181433;
-  height: 60vh;
+  padding: 5rem 0rem;
+}
+
+.presentation .profile-img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
 }
 
 .presentation .description h1 {
