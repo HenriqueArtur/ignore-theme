@@ -4,12 +4,15 @@
     <div class="container">
         <div class="row">
             <div class="col s12 m6">
+                <div id="props-grid">
+                    <div id="group-vertical"></div>
+                </div>
                 <figure class="right-align">
                     <img src="<?php echo get_option('profile_img_value');?>" alt="profile" class="circle profile-img">
                 </figure>
             </div>
             <div class="col m6 description">
-                <div class="props">
+                <div class="props-window">
                     <div class="rect r-first">
                         <i class="fas fa-times"></i>
                         <i class="fas fa-ellipsis-h"></i>

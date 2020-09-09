@@ -12,6 +12,24 @@
         z-index: 100;
     }
 
+    #props-grid {
+        position: absolute;
+        height: 100vh;
+
+        #group-vertical {
+            position: relative;
+            z-index: 1;
+            
+            .vertical-line {
+                border-right: 1px solid $primary-color;
+                position: absolute;
+                width: 0;
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
+
     .description {
         position: relative;
         z-index: 101;
@@ -40,7 +58,7 @@
         }
     
         .r-second {
-            height: 53%;
+            height: 50%;
             width: 60%;
             top: 9vh;
             right: 16vw;
@@ -98,8 +116,8 @@
         }
 
         .social-icons {
-            font-size: 2.5rem;
-            padding: 0rem 1rem;
+            font-size: 1.5rem;
+            padding: 1rem 1rem;
             
             .social-item {
                 color: $primary-help-color;
