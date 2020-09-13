@@ -12,23 +12,42 @@
         z-index: 100;
     }
 
-    #props-grid {
-        position: absolute;
-        height: 100vh;
+    .ajust-grid {
+        position: relative;
 
-        #group-vertical {
-            position: relative;
-            z-index: 1;
-            
-            .vertical-line {
-                border-right: 1px solid $primary-color;
-                position: absolute;
-                width: 0;
-                padding: 0;
-                margin: 0;
+        #props-grid {
+            position: absolute;
+            height: 300px;
+            width: 300px;
+    
+            #group-vertical {
+                position: relative;
+                z-index: 1;
+                
+                .vertical-line {
+                    border-right: 1px solid $primary-color;
+                    position: absolute;
+                    width: 0;
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+    
+            #group-horizontal {
+                position: relative;
+                z-index: 1;
+    
+                .horizontal-line {
+                    border-top: 1px solid $primary-color;
+                    position: absolute;
+                    top: 0;
+                    padding: 0;
+                    margin: 0;
+                }
             }
         }
     }
+
 
     .description {
         position: relative;
@@ -147,5 +166,9 @@
         }
     }
 
-
+    @media (min-width: 600px) {
+        .profile-img {
+            
+        }
+    }
 }

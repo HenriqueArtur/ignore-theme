@@ -1,13 +1,11 @@
 <section class="presentation">
-    
-
     <div class="container">
         <div class="row">
             <div class="col s12 m6">
-                <div id="props-grid">
-                    <div id="group-vertical"></div>
+                <div class="ajust-grid">
+                    <div id="props-grid"></div>
                 </div>
-                <figure class="right-align">
+                <figure id="profile-img" class="right-align">
                     <img src="<?php echo get_option('profile_img_value');?>" alt="profile" class="circle profile-img">
                 </figure>
             </div>

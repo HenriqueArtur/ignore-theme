@@ -40,20 +40,38 @@ body {
   z-index: 100;
 }
 
-.presentation #props-grid {
-  position: absolute;
-  height: 100vh;
+.presentation .ajust-grid {
+  position: relative;
 }
 
-.presentation #props-grid #group-vertical {
+.presentation .ajust-grid #props-grid {
+  position: absolute;
+  height: 300px;
+  width: 300px;
+}
+
+.presentation .ajust-grid #props-grid #group-vertical {
   position: relative;
   z-index: 1;
 }
 
-.presentation #props-grid #group-vertical .vertical-line {
+.presentation .ajust-grid #props-grid #group-vertical .vertical-line {
   border-right: 1px solid #F12166;
   position: absolute;
   width: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.presentation .ajust-grid #props-grid #group-horizontal {
+  position: relative;
+  z-index: 1;
+}
+
+.presentation .ajust-grid #props-grid #group-horizontal .horizontal-line {
+  border-top: 1px solid #F12166;
+  position: absolute;
+  top: 0;
   padding: 0;
   margin: 0;
 }
