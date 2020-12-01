@@ -38,7 +38,10 @@
                 <p class="slogan"><small><?php echo get_option('slogan_value');?></small></p>
                 <div class="social-icons">
                 <?php
-                    $args = array( 'post_type' => 'social_medias' );
+                    $args = array( 
+                        'post_type' => 'social_medias',
+                        'order'   => 'ASC',
+                    );
                     $query = new WP_Query( $args );
 
                     if( $query->have_posts() ) :

@@ -9,6 +9,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Russo+One&display=swap");
 body {
   font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  color: #F1E4F1;
 }
 
 .copyright {
@@ -189,4 +191,97 @@ body {
 
 .presentation .description .social-icons .social-item:hover {
   color: #F12166;
+}
+
+.projects {
+  background-color: #828494;
+  padding: 1px 0;
+}
+
+.projects .title-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 2rem;
+  margin-top: 3rem;
+}
+
+.projects .title-box .section-title {
+  font-family: "Russo One", sans-serif;
+  padding: 0rem 0.5rem;
+  position: absolute;
+  z-index: 10;
+}
+
+.projects .title-box .box {
+  position: relative;
+  background-color: #F12166;
+  height: 2.4rem;
+  top: 1.5rem;
+  width: 16.5rem;
+}
+
+.projects .project {
+  padding: 1rem 0rem;
+  position: relative;
+  bottom: 0rem;
+  -webkit-transition: bottom 0.2s ease-in-out;
+  -moz-transition: bottom 0.2s ease-in-out;
+  -o-transition: bottom 0.2s ease-in-out;
+  transition: bottom 0.2s ease-in-out;
+}
+
+.projects .project .content {
+  background-color: #F1E4F1;
+  border-radius: 0.5rem;
+  border-left: 0.5rem solid #F12166;
+  margin: 0rem 0.5rem;
+  padding: 1.5rem 1.5rem;
+}
+
+.projects .project .content .title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #181433;
+  -webkit-transition: color 0.3s ease-in-out;
+  -moz-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+.projects .project .content .description {
+  font-weight: 400;
+  font-style: italic;
+  color: #181433;
+  padding: 0.5rem 0rem;
+}
+
+.projects .project .content .tags {
+  padding-top: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.projects .project .content .tags .tag {
+  padding: .5rem .5rem;
+  background-color: #181433;
+  color: #F1E4F1;
+  border-radius: .5rem;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -moz-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.projects .project:hover {
+  cursor: pointer;
+  bottom: 1rem;
+}
+
+.projects .project:hover .title {
+  color: #F12166;
+}
+
+.projects .project:hover .tags .tag {
+  background-color: #F12166;
 }

@@ -1,0 +1,94 @@
+.projects {
+    background-color: $secudary-help-color;
+    padding: 1px 0;
+
+    .title-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-bottom: 2rem;
+        margin-top: 3rem;
+
+        .section-title {
+            font-family: $primary-font;
+            padding: 0rem 0.5rem;
+            position: absolute;
+            z-index: 10;
+        }
+
+        .box {
+            position: relative;
+            background-color: $primary-color;
+            height: 2.4rem;
+            top: 1.5rem;
+            width: 16.5rem;
+        }
+    }
+
+    .project {
+        padding: 1rem 0rem;
+        position: relative;
+        bottom: 0rem;
+        -webkit-transition: bottom 0.2s ease-in-out;
+        -moz-transition: bottom 0.2s ease-in-out;
+        -o-transition: bottom 0.2s ease-in-out;
+        transition: bottom 0.2s ease-in-out;
+
+        .content {
+            background-color: $primary-help-color;
+            border-radius: 0.5rem;
+            border-left: 0.5rem solid $primary-color;
+            margin: 0rem 0.5rem;
+            padding: 1.5rem 1.5rem;
+
+            .title {
+                font-size: 1.5rem;
+                font-weight: 600;
+                color: $secudary-color;
+                -webkit-transition: color 0.3s ease-in-out;
+                -moz-transition: color 0.3s ease-in-out;
+                -o-transition: color 0.3s ease-in-out;
+                transition: color 0.3s ease-in-out;
+            }
+
+            .description {
+                font-weight: 400;
+                font-style: italic;
+                color: $secudary-color;
+                padding: 0.5rem 0rem;
+            }
+
+            .tags {
+                padding-top: 0.5rem;
+                font-size: 0.8rem;
+
+                .tag {
+                    padding: .5rem .5rem;
+                    background-color: $secudary-color;
+                    color: $primary-help-color;
+                    border-radius: .5rem;
+                    -webkit-transition: background-color 0.3s ease-in-out;
+                    -moz-transition: background-color 0.3s ease-in-out;
+                    -o-transition: background-color 0.3s ease-in-out;
+                    transition: background-color 0.3s ease-in-out;
+                }
+            }
+        }
+    }
+
+    .project:hover {
+        cursor: pointer;
+        bottom: 1rem;
+
+        .title {
+            color: $primary-color;
+        }
+
+        .tags {
+            .tag {
+                background-color: $primary-color;
+            }
+        }
+    }
+}

@@ -3,6 +3,7 @@
 
 $primary-color: #F12166;
 $secudary-color: #181433;
+$tertiary-color: #1E1940;
 $primary-help-color: #F1E4F1;
 $secudary-help-color: #828494;
 
@@ -14,4 +15,6 @@ $padding: 1rem;
 
 body {
     font-size: 1rem;
+    font-family: $secundary-font;
+    color: $primary-help-color;
 }
