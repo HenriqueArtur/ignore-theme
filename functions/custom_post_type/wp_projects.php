@@ -58,6 +58,29 @@ function add_projects_metaboxes() {
     );
 }
 
+function projetcts_save_postdata($post_id) {
+    if( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
+    if( !current_user_can( 'edit_post' ) ) return;
+
+    $projects_data = array(
+        'icon',
+        'link_project',
+        'description',
+        'tags',
+	);
+
+	foreach ( $projects_data as $project_value){
+		if (array_key_exists($project_value.'_input', $_POST)) {
+			update_post_meta(
+				$post_id,
+				$project_value.'_key',
+				$_POST[$project_value.'_input']
+			);
+		}
+	}
+}
+add_action('save_post', 'projetcts_save_postdata');
+
 function icon_html($post) {
     ?>
     <?php $icon = get_post_meta($post->ID, 'icon_key',      true); ?>
@@ -107,14 +130,14 @@ function tags_html($post) {
             foreach($tags as $tag){
                 ?>
                 <div class="tr-tags">
-                    <input type="text" name="tags_input[]" class="role-class" value="<?php echo $tag ?>">
+                    <input type="text" name="tags_input[]" class="tags-class" value="<?php echo $tag ?>">
                 </div>
                 <?php
             }
         } else {
             ?>
             <div class="tr-tags">
-                <input type="text" name="tags_input[]" class="role-class" value="<?php echo $tag ?>">
+                <input type="text" name="tags_input[]" class="tags-class" value="<?php echo $tag ?>">
             </div>
             <?php
         }

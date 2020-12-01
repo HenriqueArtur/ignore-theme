@@ -4,7 +4,7 @@ window.onload = function() {
 		'input_tags_wrap',
 		'add_tag',
 		'remove_tag',
-		'tr-tags',
+		'tags',
 		'tags',
 		'text'
 	);
@@ -19,7 +19,7 @@ function dynamic_fields(max_fields, wrapper_class, add_btn_class, rmv_btn_class,
 			if (x < max_fields) {
 				switch (input_type) {
 					case 'text':
-						$(`.${wrapper_class}`).append('<div><input type="text" name="' + input_name + '[]" class="' + input_class + '"/></div>');
+						$(`.${wrapper_class}`).append(`<div class="tr-tags"><input type="text" name="${input_name}_input[]" class="${input_class}-class"/></div>`);
 						break;
 
 					default:
