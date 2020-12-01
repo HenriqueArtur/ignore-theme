@@ -1,7 +1,7 @@
 <section class="projects">
     <div class="container">
         <div class="row">
-            <div class="title-box center-align ">
+            <div class="title-box center-align">
                 <h2 class="section-title">Projetos</h2>
                 <div class="box"></div>
             </div>

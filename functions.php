@@ -9,6 +9,7 @@ function load_global_scripts() {
 add_action( 'admin_enqueue_scripts', 'load_scripts_adm' );
 function load_scripts_adm() {
 	wp_enqueue_script( 'upload-profile-helper', get_stylesheet_directory_uri() . '/assets/js/wp_helpes/upload-profile.js', array( 'jquery' ), '1.0.0', true );
+	wp_enqueue_script( 'dynamic-fields-helper', get_stylesheet_directory_uri() . '/assets/js/wp_helpes/dynamic-fields.js', array( 'jquery' ), '1.0.0', true );
 	wp_enqueue_style( 'css-helper', get_stylesheet_directory_uri() . '/assets/css/wp_helpes.css', array(), '1.0.0', 'all' );
 }
 
@@ -28,3 +29,4 @@ require_once get_template_directory() . '/functions/presentation_section.php';
 
 // Custom Post Type
 require_once get_template_directory() . '/functions/custom_post_type/social_medias.php';
+require_once get_template_directory() . '/functions/custom_post_type/wp_projects.php';
