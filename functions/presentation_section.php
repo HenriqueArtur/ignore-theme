@@ -40,8 +40,8 @@ function perfil_section_description(){
 	echo '<p>Perfil Option Section</p>';
 }
 
-function social_media_section_description(){
-	echo '<p>Social Media Option Section</p>';
+function contact_section_description(){
+	echo '<p>Contact Options Section</p>';
 }
 
 /*
@@ -82,6 +82,12 @@ function display_profile_img_element() {
 	<?php
 }
 
+function display_email_element() {
+	?>
+    <input type="email" name="email_value" id="email_value" value="<?php echo get_option('email_value'); ?>" />
+	<?php
+}
+
 /*
  * SETTINGS
  */
@@ -98,8 +104,8 @@ function theme_settings(){
 
 	add_settings_section(
 		'second_section',
-		'Social Medias',
-		'social_media_section_description',
+		'Contact',
+		'contact_section_description',
 		'presentation'
 	);
 
@@ -169,6 +175,19 @@ function theme_settings(){
 	register_setting(
 		'presentation-grp',
 		'profile_img_value'
+	);
+
+	// email
+	add_settings_field(
+		'email',
+		'Email',
+		'display_email_element',
+		'presentation',
+		'second_section'
+	);
+	register_setting(
+		'presentation-grp',
+		'email_value'
 	);
 }
 add_action('admin_init','theme_settings');

@@ -10,7 +10,7 @@
             <div class="col s12 infos valign-wrapper">
                 <div class="content center-align">
                     <div class="email center-align">
-                        <a href="mailto:contato@henriqueartur.com">contato@henriqueartur.com</a>
+                        <a href="mailto:<?php echo get_option('email_value');?>"> <?php echo get_option('email_value');?></a>
                     </div>
                     <div class="social-icons center-align">
                     <?php
