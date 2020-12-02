@@ -4,7 +4,7 @@ window.onload = function() {
 		'input_tags_wrap',
 		'add_tag',
 		'remove_tag',
-		'tags',
+		'tr-tags',
 		'tags',
 		'text'
 	);

@@ -22,7 +22,7 @@
                             <a href="<?php echo get_post_meta( get_the_ID(), 'link_project_key', true ) ?>" target="_blank" rel="noopener noreferrer">
                                 <div class="title">
                                     <span>
-                                        <i class="fab fa-<?php echo get_post_meta( get_the_ID(), 'icon_key', true ) ?>"></i>
+                                        <i class="<?php echo get_post_meta( get_the_ID(), 'lib_key', true ) ?> fa-<?php echo get_post_meta( get_the_ID(), 'icon_key', true ) ?>"></i>
                                     </span>
                                     <span> <?php echo the_title(); ?></span>
                                 </div>

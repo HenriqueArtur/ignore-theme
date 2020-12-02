@@ -64,6 +64,7 @@ function projetcts_save_postdata($post_id) {
 
     $projects_data = array(
         'icon',
+        'lib',
         'link_project',
         'description',
         'tags',
@@ -83,21 +84,26 @@ add_action('save_post', 'projetcts_save_postdata');
 
 function icon_html($post) {
     ?>
-    <?php $icon = get_post_meta($post->ID, 'icon_key',      true); ?>
+    <?php $icon = get_post_meta($post->ID, 'icon_key', true); ?>
+    <?php $lib = get_post_meta($post->ID, 'lib_key', true) != '' ? get_post_meta($post->ID, 'lib_key', true) : 'fab'; ?>
     <table>
         <thead>
             <tr>
                 <th style="width: 20px;">Icon</th>
                 <th>Font Awesome REF</th>
+                <th>Font Awesome LIB</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td style="width: 20px;">
-                    <i class="<?php echo 'fa-3x fab fa-' . $icon ?>"></i>
+                    <i class="<?php echo 'fa-3x ' . $lib . ' fa-' . $icon ?>"></i>
                 </td>
                 <td>
                     <input type="text" name="icon_input" value="<?php if($icon != ''){echo $icon;} ?>">
+                </td>
+                <td>
+                    <input type="text" name="lib_input" value="<?php if($lib != ''){echo $lib;} ?>">
                 </td>
             </tr>
         </tbody>
