@@ -26,6 +26,21 @@
     }
 }
 
+.to-up {
+    position: fixed;
+    right: 0rem;
+    bottom: 0rem;
+    margin: 2rem 2rem;
+    z-index: 200;
+
+    .to-up-icon {
+        padding: .7rem 1rem;
+        background-color: $primary-color;
+        border-radius: 4rem;
+        color: $primary-help-color;
+    }
+}
+
 @media (max-width: 600px)  {
     .menu-area {
         .brand-logo {

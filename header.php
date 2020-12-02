@@ -25,9 +25,9 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<header id="page-top">
+<header id="page-top" class="scrollspy">
     <section class="menu-area">
-        <nav>
+        <nav id="watchScroll">
             <div class="nav-wrapper">
                 <a href="#" class="brand-logo valign-wrapper">
                     <img src="<?php echo get_option('logo_img_value'); ?>" alt="logo">
@@ -56,3 +56,8 @@
         </nav>
     </section>
 </header>
+<div class="to-up">
+    <a href="#page-top" class="to-up-icon">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>

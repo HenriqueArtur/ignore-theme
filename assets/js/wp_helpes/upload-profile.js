@@ -16,6 +16,7 @@ function call_functions() {
         'upload_logo_field',
         'upload_logo_clear',
     );
+    
 }
 
 function upload_files(upl_btn, file_preview, file_url, del_upl_btrn) {

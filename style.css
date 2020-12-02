@@ -39,6 +39,21 @@ body {
   color: #F12166;
 }
 
+.to-up {
+  position: fixed;
+  right: 0rem;
+  bottom: 0rem;
+  margin: 2rem 2rem;
+  z-index: 200;
+}
+
+.to-up .to-up-icon {
+  padding: .7rem 1rem;
+  background-color: #F12166;
+  border-radius: 4rem;
+  color: #F1E4F1;
+}
+
 @media (max-width: 600px) {
   .menu-area .brand-logo {
     margin-left: unset;
