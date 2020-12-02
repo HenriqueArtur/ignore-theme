@@ -17,6 +17,12 @@ function call_functions() {
         'upload_logo_clear',
     );
     
+    upload_files(
+        'upload_site_banner_button',
+        'upload_site_banner_preview',
+        'upload_site_banner_field',
+        'upload_site_banner_clear',
+    );
 }
 
 function upload_files(upl_btn, file_preview, file_url, del_upl_btrn) {

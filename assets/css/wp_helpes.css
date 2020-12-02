@@ -5,3 +5,7 @@
 .upload_logo_preview {
     max-width: 200px;
 }
+
+.upload_site_banner_preview {
+    max-height: 200px;
+}

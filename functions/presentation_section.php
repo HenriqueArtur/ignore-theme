@@ -115,6 +115,17 @@ function display_logo_img_element() {
 	<?php
 }
 
+function display_site_banner_img_element() {
+	?>
+	<div>
+		<img class="upload_site_banner_preview" src="<?php echo get_option('site_banner_img_value') ?>" />
+	</div>
+    <input type="url" class="upload_site_banner_field" name="site_banner_img_value" id="site_banner_img_value" readonly value="<?php echo get_option('site_banner_img_value'); ?>" />
+    <input type="button" class="button upload_site_banner_button" value="Upload" />
+	<input type="button" class="button upload_site_banner_clear" value="Remove" />
+	<?php
+}
+
 /*
  * SETTINGS
  */
@@ -250,7 +261,7 @@ function theme_settings(){
 		'site_description_value'
 	);
 
-	// Logoimg
+	// Logo img
 	add_settings_field(
 		'logo_img',
 		'Logo image',
@@ -261,6 +272,19 @@ function theme_settings(){
 	register_setting(
 		'presentation-grp',
 		'logo_img_value'
+	);
+
+	// Site Banner img
+	add_settings_field(
+		'site_banner',
+		'Site Banner',
+		'display_site_banner_img_element',
+		'presentation',
+		'third_section'
+	);
+	register_setting(
+		'presentation-grp',
+		'site_banner_img_value'
 	);
 }
 add_action('admin_init','theme_settings');

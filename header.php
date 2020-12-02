@@ -14,14 +14,14 @@
     <meta property="og:url"         content="<?php echo get_site_url(); ?>">
     <meta property="og:title"       content="<?php echo get_option('site_name_value');?>">
     <meta property="og:description" content="<?php echo get_option('site_description_value');?>">
-    <meta property="og:image"       content="<?php echo get_stylesheet_directory_uri() . '/assets/img/banner-site.png';?>">
+    <meta property="og:image"       content="<?php echo get_option('site_banner_img_value');?>">
 
     <!-- Twitter -->
     <meta property="twitter:card"        content="summary_large_image">
     <meta property="twitter:url"         content="<?php echo get_site_url(); ?>">
     <meta property="twitter:title"       content="<?php echo get_option('site_name_value');?>">
     <meta property="twitter:description" content="<?php echo get_option('site_description_value');?>">
-    <meta property="twitter:image"       content="<?php echo get_stylesheet_directory_uri() . '/assets/img/banner-site.png';?>">
+    <meta property="twitter:image"       content="<?php echo get_option('site_banner_img_value');?>">
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
