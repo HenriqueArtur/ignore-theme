@@ -3,7 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Henrique Artur</title>
+
+    <!-- Primary Meta Tags -->
+    <title><?php echo get_option('site_name_value');?></title>
+    <meta name="title"       content="<?php echo get_option('site_name_value');?>">
+    <meta name="description" content="<?php echo get_option('site_description_value');?>">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type"        content="website">
+    <meta property="og:url"         content="<?php echo get_site_url(); ?>">
+    <meta property="og:title"       content="<?php echo get_option('site_name_value');?>">
+    <meta property="og:description" content="<?php echo get_option('site_description_value');?>">
+    <meta property="og:image"       content="<?php echo get_stylesheet_directory_uri() . '/assets/img/banner-site.png';?>">
+
+    <!-- Twitter -->
+    <meta property="twitter:card"        content="summary_large_image">
+    <meta property="twitter:url"         content="<?php echo get_site_url(); ?>">
+    <meta property="twitter:title"       content="<?php echo get_option('site_name_value');?>">
+    <meta property="twitter:description" content="<?php echo get_option('site_description_value');?>">
+    <meta property="twitter:image"       content="<?php echo get_stylesheet_directory_uri() . '/assets/img/banner-site.png';?>">
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -11,7 +29,9 @@
     <section class="menu-area">
         <nav>
             <div class="nav-wrapper">
-                <a href="#" class="brand-logo">Logo</a>
+                <a href="#" class="brand-logo valign-wrapper">
+                    <img src="<?php echo get_option('logo_img_value'); ?>" alt="logo">
+                </a>
                 <a href="#" data-target="slide-out" class="sidenav-trigger">
                   <i class="fas fa-bars"></i>
                 </a>
@@ -28,7 +48,8 @@
                     'menu_class'      => 'sidenav',
                     'menu_id'         => 'slide-out',
                     'container'       => 'ul',
-                    'add_li_class'    => 'sidenav-close'
+                    'add_li_class'    => 'sidenav-close',
+                    'walker'          => new Add_button_of_Sublevel_Walker,
                     )); 
                 ?>
             </div>

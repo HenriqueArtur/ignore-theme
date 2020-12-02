@@ -37,11 +37,15 @@ function presentation_menu_render() {
  * SECTIONS CALLBACKS
  */
 function perfil_section_description(){
-	echo '<p>Perfil Option Section</p>';
+	echo '<p>Perfil Options Section</p>';
 }
 
 function contact_section_description(){
 	echo '<p>Contact Options Section</p>';
+}
+
+function site_assets_section_description(){
+	echo '<p>Site Assets Options Section</p>';
 }
 
 /*
@@ -88,6 +92,29 @@ function display_email_element() {
 	<?php
 }
 
+function display_site_name_element(){
+	?>
+	<input type="text" name="site_name_value" id="site_name_value" value="<?php echo get_option('site_name_value'); ?>" />
+	<?php
+}
+
+function display_site_description_element(){
+	?>
+	<textarea name="site_description_value" id="site_description_value" rows="4" cols="50"><?php echo get_option('site_description_value'); ?></textarea>
+	<?php
+}
+
+function display_logo_img_element() {
+	?>
+	<div>
+		<img class="upload_logo_preview" src="<?php echo get_option('logo_img_value') ?>" />
+	</div>
+    <input type="url" class="upload_logo_field" name="logo_img_value" id="logo_img_value" readonly value="<?php echo get_option('logo_img_value'); ?>" />
+    <input type="button" class="button upload_logo_button" value="Upload" />
+	<input type="button" class="button upload_logo_clear" value="Remove" />
+	<?php
+}
+
 /*
  * SETTINGS
  */
@@ -106,6 +133,13 @@ function theme_settings(){
 		'second_section',
 		'Contact',
 		'contact_section_description',
+		'presentation'
+	);
+
+	add_settings_section(
+		'third_section',
+		'Site Assets',
+		'site_assets_section_description',
 		'presentation'
 	);
 
@@ -188,6 +222,45 @@ function theme_settings(){
 	register_setting(
 		'presentation-grp',
 		'email_value'
+	);
+
+	// Site Name
+	add_settings_field(
+		'site_name',
+		'Site name',
+		'display_site_name_element',
+		'presentation',
+		'third_section'
+	);
+	register_setting(
+		'presentation-grp',
+		'site_name_value'
+	);
+
+	// Site Description
+	add_settings_field(
+		'site_description',
+		'Site description',
+		'display_site_description_element',
+		'presentation',
+		'third_section'
+	);
+	register_setting(
+		'presentation-grp',
+		'site_description_value'
+	);
+
+	// Logoimg
+	add_settings_field(
+		'logo_img',
+		'Logo image',
+		'display_logo_img_element',
+		'presentation',
+		'third_section'
+	);
+	register_setting(
+		'presentation-grp',
+		'logo_img_value'
 	);
 }
 add_action('admin_init','theme_settings');

@@ -1,4 +1,4 @@
-<section id="contact" class="contact">
+<section id="contact" class="contact section scrollspy">
     <div class="container">
         <div class="row">
             <div class="title-box center-align">

@@ -40,6 +40,22 @@ function add_additional_class_on_li($classes, $item, $args) {
 }
 add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
 
+class Add_button_of_Sublevel_Walker extends Walker_Nav_Menu
+{
+    function start_lvl( &$output, $depth = 0, $args = array() ) {
+        $indent = str_repeat("\t", $depth);
+        $output .= "\n$indent<button type='button' class='toggle-btn'>
+            <span class='bar'></span>
+            <span class='bar'></span>
+            <span class='bar'></span>
+        </button><ul class='submenu'>\n";
+    }
+    function end_lvl( &$output, $depth = 0, $args = array() ) {
+        $indent = str_repeat("\t", $depth);
+        $output .= "$indent</ul>\n";
+    }
+}
+
 // Presentation Section
 require_once get_template_directory() . '/functions/presentation_section.php';
 

@@ -18,6 +18,15 @@ body {
   color: #F1E4F1;
 }
 
+.menu-area .brand-logo {
+  margin-left: 2rem;
+}
+
+.menu-area .brand-logo > img {
+  margin-top: 0.8rem;
+  max-height: 2.5rem;
+}
+
 .menu-area .header-web {
   margin-right: 2rem;
 }
@@ -28,6 +37,12 @@ body {
 
 .menu-area .menu-item:hover > a {
   color: #F12166;
+}
+
+@media (max-width: 600px) {
+  .menu-area .brand-logo {
+    margin-left: unset;
+  }
 }
 
 .copyright {

@@ -4,6 +4,15 @@
         color: $primary-help-color;
     }
     
+    .brand-logo {
+        margin-left: 2rem;
+    }
+
+    .brand-logo > img {
+        margin-top: 0.8rem;
+        max-height: 2.5rem;
+    }
+
     .header-web {
         margin-right: 2rem;
     }
@@ -14,5 +23,13 @@
 
     .menu-item:hover > a {
         color: $primary-color;
+    }
+}
+
+@media (max-width: 600px)  {
+    .menu-area {
+        .brand-logo {
+            margin-left: unset;
+        }
     }
 }
