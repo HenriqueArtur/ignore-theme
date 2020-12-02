@@ -16,16 +16,17 @@
 }
 
 .r-first {
-    height: 70%;
-    width: 80%;
+    height: 190px;
+    width: 350px;
     right: 0rem;
 }
 
 .r-second {
-    height: 50%;
-    width: 60%;
-    top: 9vh;
-    right: 16vw;
+    height: 130px;
+    width: 300px;
+    top: 10vh;
+    right: 6vw;
+    z-index: -1;
 }
 
 @media (max-width: 600px)  {

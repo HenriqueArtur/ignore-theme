@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col s12 m6">
-                <div class="ajust-grid hide-on-small-only">
+                <div class="ajust-grid">
                     <div id="props-grid"></div>
                 </div>
                 <figure id="profile-img" class="right-align">

@@ -1,0 +1,42 @@
+.ajust-grid {
+    position: relative;
+
+    #props-grid {
+        position: absolute;
+        height: 300px;
+        width: 300px;
+        right: 7rem;
+
+        #group-vertical {
+            position: relative;
+            z-index: 1;
+            
+            .vertical-line {
+                border-right: 1px solid $primary-color;
+                position: absolute;
+                width: 0;
+                padding: 0;
+                margin: 0;
+            }
+        }
+
+        #group-horizontal {
+            position: relative;
+            z-index: 1;
+
+            .horizontal-line {
+                border-top: 1px solid $primary-color;
+                position: absolute;
+                top: 0;
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px)  {
+    #props-grid {
+        right: 5rem;
+    }
+}
