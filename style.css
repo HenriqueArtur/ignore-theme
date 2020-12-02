@@ -105,9 +105,17 @@ body {
   right: 16vw;
 }
 
+@media (max-width: 600px) {
+  .r-first {
+    height: 67%;
+    width: 80%;
+    right: 0rem;
+  }
+}
+
 .presentation {
   background-color: #181433;
-  padding: 5rem 0rem;
+  padding: 2rem 0rem;
   display: flex;
   justify-content: flex-end;
 }

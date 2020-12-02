@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col s12 m6">
-                <div class="ajust-grid">
+                <div class="ajust-grid hide-on-small-only">
                     <div id="props-grid"></div>
                 </div>
                 <figure id="profile-img" class="right-align">
@@ -15,7 +15,7 @@
                         <i class="fas fa-times"></i>
                         <i class="fas fa-ellipsis-h"></i>
                     </div>
-                    <div class="rect r-second">
+                    <div class="rect r-second hide-on-med-and-down">
                         <i class="fas fa-times"></i>
                         <i class="fas fa-ellipsis-h"></i>
                     </div>

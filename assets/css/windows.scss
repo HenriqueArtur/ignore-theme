@@ -27,3 +27,11 @@
     top: 9vh;
     right: 16vw;
 }
+
+@media (max-width: 600px)  {
+    .r-first {
+        height: 67%;
+        width: 80%;
+        right: 0rem;
+    }
+}
