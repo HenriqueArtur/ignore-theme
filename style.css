@@ -13,6 +13,23 @@ body {
   color: #F1E4F1 !important;
 }
 
+.menu-area .nav-wrapper, .menu-area .sidenav {
+  background-color: #1E1940;
+  color: #F1E4F1;
+}
+
+.menu-area .header-web {
+  margin-right: 2rem;
+}
+
+.menu-area .menu-item a {
+  color: #F1E4F1;
+}
+
+.menu-area .menu-item:hover > a {
+  color: #F12166;
+}
+
 .copyright {
   background-color: #181433;
   font-family: "Open Sans", sans-serif;

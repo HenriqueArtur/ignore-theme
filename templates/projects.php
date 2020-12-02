@@ -1,4 +1,4 @@
-<section class="projects">
+<section id="projects" class="projects">
     <div class="container">
         <div class="row">
             <div class="title-box center-align">

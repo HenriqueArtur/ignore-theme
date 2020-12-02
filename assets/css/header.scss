@@ -1,0 +1,18 @@
+.menu-area {
+    .nav-wrapper, .sidenav {
+        background-color: $tertiary-color;
+        color: $primary-help-color;
+    }
+    
+    .header-web {
+        margin-right: 2rem;
+    }
+
+    .menu-item a {
+        color: $primary-help-color;
+    }
+
+    .menu-item:hover > a {
+        color: $primary-color;
+    }
+}

@@ -17,7 +17,6 @@ function createGrid(size, partsQnt, divToAppend) {
     }
     divs += `</div>`
 
-    console.log(divs)
     document.getElementById(divToAppend).innerHTML += divs
 }
 
