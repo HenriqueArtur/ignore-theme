@@ -10,7 +10,7 @@
                 </figure>
             </div>
             <div class="col m6 description">
-                <div class="props-window">
+                <!-- <div class="props-window">
                     <div class="rect r-first">
                         <i class="fas fa-times"></i>
                         <i class="fas fa-ellipsis-h"></i>
@@ -19,7 +19,7 @@
                         <i class="fas fa-times"></i>
                         <i class="fas fa-ellipsis-h"></i>
                     </div>
-                </div>
+                </div> -->
                 <h1>
                     <div class="title-box">
                         <span class="name">
